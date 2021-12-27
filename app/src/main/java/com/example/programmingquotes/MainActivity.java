@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private List<ProgrammingQuote> mProgrammingQuotes = new ArrayList<>();
     private PQAdapter mPQAdapter;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(linearLayoutManager);
         mPQAdapter = new PQAdapter(this, mProgrammingQuotes);
         mRecyclerView.setAdapter(mPQAdapter);
+        progressBar = findViewById(R.id.progressBar);
 
+        progressBar.setVisibility(View.VISIBLE);
         requestQuotes();
     }
 
@@ -47,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                         mProgrammingQuotes.add(programmingQuote);
                     }
                     mPQAdapter.notifyDataSetChanged();*/
+
+                    progressBar.setVisibility(View.GONE);
 
                     mProgrammingQuotes.clear();
                     mProgrammingQuotes.addAll(response.body());
