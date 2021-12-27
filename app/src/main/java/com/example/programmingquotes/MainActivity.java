@@ -1,5 +1,6 @@
 package com.example.programmingquotes;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,9 +43,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<ProgrammingQuote>> call, Response<List<ProgrammingQuote>> response) {
                 if (response.isSuccessful()) {
-                    for (ProgrammingQuote programmingQuote : response.body()) {
+                    /*for (ProgrammingQuote programmingQuote : response.body()) {
                         mProgrammingQuotes.add(programmingQuote);
                     }
+                    mPQAdapter.notifyDataSetChanged();*/
+
+                    mProgrammingQuotes.clear();
+                    mProgrammingQuotes.addAll(response.body());
                     mPQAdapter.notifyDataSetChanged();
                 }
                 else {
