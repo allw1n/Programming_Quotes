@@ -1,7 +1,6 @@
 package com.example.programmingquotes;
 
 import android.content.Context;
-import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +13,9 @@ import java.util.List;
 public class PQAdapter extends RecyclerView.Adapter<PQViewHolder> {
 
     private Context mContext;
-    private List<ProgrammingQuotes> mProgrammingQuotes;
+    private List<ProgrammingQuote> mProgrammingQuotes;
 
-    public PQAdapter(Context context, List<ProgrammingQuotes> programmingQuotes) {
+    public PQAdapter(Context context, List<ProgrammingQuote> programmingQuotes) {
         mContext = context;
         mProgrammingQuotes = programmingQuotes;
     }
@@ -30,8 +29,8 @@ public class PQAdapter extends RecyclerView.Adapter<PQViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull PQViewHolder holder, int position) {
-        ProgrammingQuotes programmingQuotes =mProgrammingQuotes.get(position);
-        holder.bind(programmingQuotes);
+        ProgrammingQuote programmingQuote = mProgrammingQuotes.get(position);
+        holder.bind(programmingQuote);
     }
 
     @Override

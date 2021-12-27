@@ -17,9 +17,9 @@ public class PQViewHolder extends RecyclerView.ViewHolder {
         txtPQA = itemView.findViewById(R.id.txtPQA);
     }
 
-    public void bind(ProgrammingQuotes programmingQuotes) {
-        txtPQ.setText(programmingQuotes.getEn());
-        txtPQA.setText(programmingQuotes.getAuthor());
+    public void bind(ProgrammingQuote programmingQuote) {
+        txtPQ.setText(programmingQuote.getEn());
+        txtPQA.setText(programmingQuote.getAuthor());
     }
 
     public TextView getTxtPQ() {
