@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class PQViewHolder extends RecyclerView.ViewHolder {
 
     private TextView txtPQ, txtPQA;
+    private String authorTxt;
 
     public PQViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -19,7 +20,8 @@ public class PQViewHolder extends RecyclerView.ViewHolder {
 
     public void bind(ProgrammingQuote programmingQuote) {
         txtPQ.setText(programmingQuote.getEn());
-        txtPQA.setText(programmingQuote.getAuthor());
+        authorTxt = " - " + programmingQuote.getAuthor();
+        txtPQA.setText(authorTxt);
     }
 
     public TextView getTxtPQ() {
