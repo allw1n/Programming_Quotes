@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitServiceGenerator {
 
-    private final static String BASE_API_URL = "https://programming-quotes-api.herokuapp.com/Quotes";
+    private final static String BASE_API_URL = "https://programming-quotes-api.herokuapp.com/";
     private static Retrofit mRetrofit = null;
     private static final Gson gson = new GsonBuilder().create();
 
