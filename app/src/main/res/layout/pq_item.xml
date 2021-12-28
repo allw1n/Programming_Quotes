@@ -6,28 +6,18 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/empty_space"
-        android:textSize="8sp"/>
-
-    <TextView
         android:id="@+id/txtPQ"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="22sp"/>
+        android:textSize="22sp"
+        android:paddingTop="8dp"/>
 
     <TextView
         android:id="@+id/txtPQA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/empty_space"
-        android:textSize="8sp"/>
+        android:textSize="18sp"
+        android:paddingBottom="8dp"/>
 
     <View
         android:id="@+id/divider"
